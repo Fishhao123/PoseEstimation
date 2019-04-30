@@ -12,6 +12,7 @@ public class Subscriber extends JedisPubSub {
         //System.out.println(String.format("receive redis published message, channel %s, message %s", channel, message));
         WebSocketController wsc = new WebSocketController();
         wsc.sendData(message); //通过WebSocket向前端发送数据
+
     }
     @Override
     public void onSubscribe(String channel, int subscribedChannels) {    //订阅了频道会调用
