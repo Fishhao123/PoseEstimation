@@ -9,5 +9,8 @@
         <module name="PoseEstimation" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="PoseEstimation" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
