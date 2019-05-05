@@ -1,6 +1,6 @@
 package com.fishhao.controller;
 
-import com.fishhao.entity.SubThread;
+import com.fishhao.Service.RedisService.SubThread;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
@@ -102,5 +102,6 @@ public class WebSocketController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 }

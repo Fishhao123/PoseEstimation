@@ -1,7 +1,6 @@
 package com.fishhao.utils;
 
-import com.fishhao.entity.Publisher;
-import com.fishhao.entity.SubThread;
+import com.fishhao.Service.RedisService.SubThread;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
