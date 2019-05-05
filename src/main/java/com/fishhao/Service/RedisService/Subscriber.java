@@ -36,6 +36,8 @@ public class Subscriber extends JedisPubSub{
             WebSocketHelper.sendData(result,userToken);
             jedis.close();
         }
+
+
     }
 
     @Override
