@@ -1,4 +1,4 @@
-package com.fishhao.entity;
+package com.fishhao.Service.RedisService;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;

@@ -157,12 +157,12 @@
                 console.log("WebSocket连接成功!");
                 this.socket.send("Hello!");
             },
-            onMessage: function(event){
-                if(event.data){
-                    console.log("接收到来自后台的消息：" + event.data);
-                    this.gameInstance.SendMessage("Philip", "GetPose", event.data); //调用Unity内部方法，将姿态数据传入
-                }
-            },
+            // onMessage: function(event){
+            //     if(event.data){
+            //         console.log("接收到来自后台的消息：" + event.data);
+            //         this.gameInstance.SendMessage("Philip", "GetPose", event.data); //调用Unity内部方法，将姿态数据传入
+            //     }
+            // },
             onError: function(){
                 console.log("WebSocket连接发生错误！");
             },

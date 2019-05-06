@@ -1,15 +1,10 @@
 package com.fishhao.controller;
 
-import com.alibaba.fastjson.JSONObject;
-import com.fishhao.entity.SubThread;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
@@ -36,7 +31,7 @@ public class IndexController {
         return new ModelAndView("test");
     }
 
-    @RequestMapping(value = "/sendWS", method = {RequestMethod.POST}) //用于获取inflexDB中tags（key-value）和fields（key）
+    @RequestMapping(value = "/sendWS", method = {RequestMethod.POST})
     @ResponseBody
     public void sendWS(HttpServletRequest request) {
 //        String msg = request.getParameter("msg");

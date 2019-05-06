@@ -1,8 +1,7 @@
-package com.fishhao.entity;
+package com.fishhao.service.RedisService;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPubSub;
 
 public class SubThread extends Thread {
 
@@ -24,6 +23,7 @@ public class SubThread extends Thread {
         try {
             jedis = jedisPool.getResource();   //取出一个连接
             jedis.subscribe(subscriber, channel);    //通过subscribe 的api去订阅，入参是订阅者和频道名
+
         } catch (Exception e) {
             System.out.println(String.format("subsrcibe channel error, %s", e));
         } finally {

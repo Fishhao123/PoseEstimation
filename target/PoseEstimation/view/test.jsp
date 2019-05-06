@@ -11,6 +11,7 @@
     <title>姿态分析展示平台</title>
     <link rel="shortcut icon" href="/PoseEstimation/webGL/TemplateData/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><!-- 引入vue框架 -->
+    <script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script><%--录制实时视频用--%>
     <script src="https://unpkg.com/element-ui/lib/index.js"></script><!-- 引入element组件库 -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"><!-- 引入element样式 -->
     <%--<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>--%>
@@ -104,7 +105,7 @@
         <%--</div>--%>
         <div class="data-main">
             <div class="main-left">
-                <component :is="pageSet.left" :msg=""></component><%--加载左侧组件--%>
+                <component :is="pageSet.left"></component><%--加载左侧组件--%>
             </div>
             <div class="main-center">
                 <data-box :title="'实时Unity3D动画'" :dheight="500" :icon="'account'" :boxb="false">
@@ -147,7 +148,7 @@
                         </el-form>
                     </data-box>
                     <data-box :title="'摄像头实时输出画面'" :dheight="400" :boxb="false">
-                        <div style="width: 100%; height: 100%; background: black"></div>
+                        <video style="width: 100%; height: 100%" autoplay></video>
                     </data-box>
                 </data-box>
 
@@ -158,9 +159,11 @@
 </div>
 
 <script>
+    var mediaRecorder;
     var app = new Vue({
         el:'#app',
         data:{
+            // chunks:[],
             gameInstance:'',
             button:{
                 enable:true,
@@ -202,8 +205,9 @@
         },
         mounted: function(){
             this.initPage();
+            this.initCamera(); //初始启动摄像头
             // this.initWebSocket();
-            this.gameInstance = UnityLoader.instantiate("gameContainer", "/PoseEstimation/webGL/Build/PoseTest.json", {onProgress: UnityProgress});
+            // this.gameInstance = UnityLoader.instantiate("gameContainer", "/PoseEstimation/webGL/Build/PoseTest.json", {onProgress: UnityProgress});
         },
         watch:{
             chosenModule: function (newVal) {
@@ -211,6 +215,20 @@
             }
         },
         methods:{
+            initCamera:function(){
+                let _this = this;
+                let constraints = { video: true };
+                navigator.mediaDevices.getUserMedia(constraints)
+                    .then(function(mediaStream) {
+                        let video = document.querySelector('video');
+                        video.srcObject = mediaStream;
+                        video.onloadedmetadata = function(e) {
+                            // video.play();
+                            // _this.recordVideo(mediaStream); //开始录制视频
+                        };
+                    })
+                    .catch(function(err) { console.log(err.name + ": " + err.message); }); // 总是在最后检查错误
+            },
             initPage:function(){ //页面初始化
                 this.chosenCharacter = this.characterOptions[0].value; //初始选择男性角色
                 this.chosenScene = this.sceneOptions[0].value; //初始选择户外场景
@@ -229,7 +247,8 @@
             initWebSocket: function () {
                 if(window.WebSocket){
                     console.log("初始化WebSocket！");
-                    this.socket = new WebSocket('ws://localhost:8080/PoseEstimation/webSocket'); //TODO
+                    // this.socket = new WebSocket('ws://localhost:8080/PoseEstimation/unityWebSocket');
+                    this.socket = new WebSocket('ws://localhost:8080/PoseEstimation/webSocket/123'); //123为用户ID
                     this.socket.onopen = this.onOpen;
                     this.socket.onmessage = this.onMessage;
                     this.socket.onerror = this.onError;
@@ -240,6 +259,7 @@
             },
             onOpen: function () {
                 console.log("WebSocket连接成功!");
+                this.socket.binaryType = "arraybuffer"; //设置发送消息类型
                 this.socket.send("Hello!");
             },
             onMessage: function(event){
@@ -253,7 +273,46 @@
             },
             onClose: function(){
                 console.log("WebSocket关闭！");
-            }
+            },
+            // recordVideo: function (stream) { //录制实时视频
+            //     let _this = this;
+            //     let options;
+            //     if (typeof MediaRecorder.isTypeSupported == 'function'){//这里涉及到视频的容器以及编解码参数，这个与浏览器有密切的关系
+            //         if (MediaRecorder.isTypeSupported('video/webm;codecs=vp9')) {
+            //             options = {mimeType: 'video/webm;codecs=h264'};
+            //         } else if (MediaRecorder.isTypeSupported('video/webm;codecs=h264')) {
+            //             options = {mimeType: 'video/webm;codecs=h264'};
+            //         } else if (MediaRecorder.isTypeSupported('video/webm;codecs=vp8')) {
+            //             options = {mimeType: 'video/webm;codecs=vp8'};
+            //         }
+            //         console.log('Using '+options.mimeType);
+            //         mediaRecorder = new MediaRecorder(stream, options);
+            //     }else{
+            //         log('isTypeSupported is not supported, using default codecs for browser');
+            //         mediaRecorder = new MediaRecorder(stream);
+            //     }
+            //
+            //     mediaRecorder.ondataavailable = function(event) { //当视频数据准备完成时回调
+            //         // this.chunks.push(event.data);
+            //         let reader = new FileReader();
+            //         reader.addEventListener("loadend", function() { //读取数据结束后的监听方法
+            //             let buf = new Uint8Array(reader.result); //reader.result是一个含有视频数据流的Blob对象，进行格式转换
+            //             console.log(buf);
+            //             if(reader.result.byteLength > 0){ //空数据不进行发送
+            //                 _this.socket.send(buf);
+            //             }
+            //         });
+            //         reader.readAsArrayBuffer(event.data);
+            //     };
+            //     mediaRecorder.onerror = function(e){
+            //         console.log('实时视频录制出错：' + e);
+            //     };
+            //     mediaRecorder.onstart = function(){
+            //         console.log('实时视频开始录制：' + mediaRecorder.state);
+            //     };
+            //     mediaRecorder.start(10); //每10ms记录成一个Blob
+            // }
+
         },
         components:{
             dataBox:DataBox,

@@ -1,6 +1,6 @@
 package com.fishhao.controller;
 
-import com.fishhao.entity.SubThread;
+import com.fishhao.service.RedisService.SubThread;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-@ServerEndpoint(value = "/webSocket")
+@ServerEndpoint(value = "/unityWebSocket")
 public class WebSocketController {
     private static int onlineCount = 0; //用于记录当前在线连接数
     private Session session; //连接会话
@@ -91,6 +91,7 @@ public class WebSocketController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     //读取本地存放的姿态数据
@@ -113,14 +114,6 @@ public class WebSocketController {
             e.printStackTrace();
         }
     }
-
-    public float matching(List<List<String>> orignalPose, List<List<String>> realTimePose){
-        for(List oneJoint: orignalPose){
-
-        }
-        return 0;
-    }
-
 
 
 }
