@@ -148,7 +148,9 @@
                         </el-form>
                     </data-box>
                     <data-box :title="'摄像头实时输出画面'" :dheight="400" :boxb="false">
-                        <video style="width: 100%; height: 100%" autoplay></video>
+                        <%--<canvas style="width: 100%; height: 100%">--%>
+                            <video style="width: 100%; height: 100%" autoplay></video>
+                        <%--</canvas>--%>
                     </data-box>
                 </data-box>
 
@@ -212,6 +214,7 @@
             this.initPage();
             this.initWebSocket(); //初始化WebSocket
             this.initCamera(); //初始化摄像头
+
             // this.gameInstance = UnityLoader.instantiate("gameContainer", "/PoseEstimation/webGL/Build/PoseTest.json", {onProgress: UnityProgress});
         },
         watch:{
@@ -223,17 +226,13 @@
             initCamera:function(){
                 let _this = this;
                 let constraints = { video: true };
+                let video = document.querySelector('video');
                 navigator.mediaDevices.getUserMedia(constraints)
                     .then(function(mediaStream) {
-                        let video = document.querySelector('video');
                         video.srcObject = mediaStream;
-                        video.onloadedmetadata = function(e) { //视频加载完成后进行回调
-                            _this.transPicture(video);
-                            // video.play();
-                            // _this.recordVideo(mediaStream); //开始录制视频
-                        };
                     })
                     .catch(function(err) { console.log(err.name + ": " + err.message); }); // 总是在最后检查错误
+
             },
             initPage:function(){ //页面初始化
                 this.chosenCharacter = this.characterOptions[0].value; //初始选择男性角色
@@ -264,9 +263,13 @@
                 }
             },
             onOpen: function () {
+                let _this = this;
                 console.log("WebSocket连接成功!");
+                setInterval(function(){
+                    _this.transImage(document.querySelector('video'));
+                }, 50); //50ms发送一次
                 // this.socket.binaryType = "arraybuffer"; //设置发送消息类型
-                this.socket.send("Hello!");
+                // this.socket.send("Hello!");
             },
             onMessage: function(event){
                 if(event.data){
@@ -280,15 +283,20 @@
             onClose: function(){
                 console.log("WebSocket关闭！");
             },
-            transPicture:function (video) {
+            transImage:function (video) {
+                console.log("进入tansImage方法");
                 let _this = this;
-                setInterval(function (video) {
-                    let image = video.toDataURL('image/png');
-                    if(image){
-                        _this.sendMsg.image = image; //填充base64编码后的视频帧
-                        this.socket.send(JSON.stringify(_this.sendMsg)); //通过WebSocket发送到后台
-                    }
-                }, 50); //50ms发送一次
+                let canvas = document.createElement("canvas");
+                let scale = 0.01; //缩放比例
+                canvas.width = video.videoWidth * scale;
+                canvas.height = video.videoHeight * scale;
+                canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+                let image = canvas.toDataURL('image/png');
+                if(image != null){
+                    _this.sendMsg.image = image; //填充base64编码后的视频帧
+                    this.socket.send(JSON.stringify(_this.sendMsg)); //通过WebSocket发送到后台
+                    console.log(image);
+                }
             }
 
             // recordVideo: function (stream) { //录制实时视频

@@ -9,9 +9,9 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-import javax.jms.BytesMessage;
-import javax.jms.JMSException;
-import javax.jms.Message;
+//import javax.jms.BytesMessage;
+//import javax.jms.JMSException;
+//import javax.jms.Message;
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
@@ -45,7 +45,7 @@ public class WebSocketHelper {
     @OnOpen
     public void onOpen(@PathParam("userToken") String userToken, Session session){
         webSocketInit(userToken, session);
-        redisInit();
+//        redisInit();
     }
 
     //接收到消息调用方法
@@ -86,6 +86,7 @@ public class WebSocketHelper {
         this.userToken = userToken;
         this.session = session;
         addOnlineCount();
+        System.out.println("有一个连接开启，当前在线人数为" + getOnlineCount());
         if(!userWebSocketMap.containsKey(userToken)){
             userWebSocketMap.put(userToken, this);
         }
@@ -139,54 +140,54 @@ public class WebSocketHelper {
 
     //收到消息后放入redis中
     //FIXME： 不知道websocket的数据返回类型具体是啥样的，先写一个类似于JMS的方法替代
-    public static synchronized void putRedis(Message message){
-        BytesMessage bytesMessage = (BytesMessage)message;
-        try {
-            // 得到一些参数：
-
-            String user_token = String.valueOf(bytesMessage.getByteProperty("user-token"));  // user-token
-            String task = String.valueOf(bytesMessage.getByteProperty("task"));               // task
-            String image_base64 ="";                                            // origin image
-            UUID uuid= UUID.randomUUID();
-            String imageID = uuid.toString();                                   // imageID
-
-            byte[] buffer = new byte[1024*1024];
-            int len = 0;
-            while((len=bytesMessage.readBytes(buffer))!=-1){
-                image_base64 = new String(buffer,0,len);
-            }
-
-//                System.out.println("imageID: "+imageID +",user-token: "+user_token+" ,task: "+task+", image_base64: "+ image_base64);
-            Jedis jedis = jedisPool.getResource();
-
-
-            Map<String,String> imageData = new HashMap<String, String>();
-            imageData.put("imageID",imageID);
-            imageData.put("userToken",user_token);
-            imageData.put("taskList",task);
-            imageData.put("image",image_base64);
-
-            JSONObject jsonObject = JSONObject.fromObject(imageData);
-
-//              比较task列表并分发存入对应的redis的list
-
-            int taskToDo = Integer.parseInt(task);
-            if((taskToDo&0x01)>0) { //pose
-                jedis.rpush("image_queue_to_pose_estimation", jsonObject.toString());
-//                    jedisTemplate.convertAndSend("test_channel",jsonObject);
-            }
-            if((taskToDo&0x02)>0){ //face
-                jedis.rpush("image_queue_to_face_recognition", jsonObject.toString());
-            }
-            if((taskToDo&0x04)>0){ //object
-                jedis.rpush("image_queue_to_object_recognition", jsonObject.toString());
-            }
-
-            //手动释放资源，不然会因为jedisPool里面的maxActive=200的限制，只能创建200个jedis资源。
-            jedis.close();
-
-        } catch (JMSException e) {
-            e.printStackTrace();
-        }
-    }
+//    public static synchronized void putRedis(Message message){
+//        BytesMessage bytesMessage = (BytesMessage)message;
+//        try {
+//            // 得到一些参数：
+//
+//            String user_token = String.valueOf(bytesMessage.getByteProperty("user-token"));  // user-token
+//            String task = String.valueOf(bytesMessage.getByteProperty("task"));               // task
+//            String image_base64 ="";                                            // origin image
+//            UUID uuid= UUID.randomUUID();
+//            String imageID = uuid.toString();                                   // imageID
+//
+//            byte[] buffer = new byte[1024*1024];
+//            int len = 0;
+//            while((len=bytesMessage.readBytes(buffer))!=-1){
+//                image_base64 = new String(buffer,0,len);
+//            }
+//
+////                System.out.println("imageID: "+imageID +",user-token: "+user_token+" ,task: "+task+", image_base64: "+ image_base64);
+//            Jedis jedis = jedisPool.getResource();
+//
+//
+//            Map<String,String> imageData = new HashMap<String, String>();
+//            imageData.put("imageID",imageID);
+//            imageData.put("userToken",user_token);
+//            imageData.put("taskList",task);
+//            imageData.put("image",image_base64);
+//
+//            JSONObject jsonObject = JSONObject.fromObject(imageData);
+//
+////              比较task列表并分发存入对应的redis的list
+//
+//            int taskToDo = Integer.parseInt(task);
+//            if((taskToDo&0x01)>0) { //pose
+//                jedis.rpush("image_queue_to_pose_estimation", jsonObject.toString());
+////                    jedisTemplate.convertAndSend("test_channel",jsonObject);
+//            }
+//            if((taskToDo&0x02)>0){ //face
+//                jedis.rpush("image_queue_to_face_recognition", jsonObject.toString());
+//            }
+//            if((taskToDo&0x04)>0){ //object
+//                jedis.rpush("image_queue_to_object_recognition", jsonObject.toString());
+//            }
+//
+//            //手动释放资源，不然会因为jedisPool里面的maxActive=200的限制，只能创建200个jedis资源。
+//            jedis.close();
+//
+//        } catch (JMSException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
