@@ -7,37 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff5ad049-ae1f-4d2a-a54c-aec0c15599f4" name="Default Changelist" comment="前端完成视频帧采集编码发送；&#10;WebSocketHelper初步接收（需要进一步解析）；&#10;SendMsg实体类用于存放前端向后端传递消息。">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/Service/RedisService/Subscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/entity/SendMsg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fishhao/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fishhao/entity/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/Service/RedisService/Publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fishhao/entity/SubThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/Service/RedisService/SubThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fishhao/entity/Subscriber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fishhao/utils/MatchingUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/utils/MatchingUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fishhao/utils/PubSubDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/utils/PubSubDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoseEstimation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PoseEstimation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fishhao/entity/SendMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fishhao/entity/SendMsg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/webGL.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/webGL.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/controller/WebSocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/controller/WebSocketController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/entity/Publisher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/entity/SubThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/entity/Subscriber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/utils/MatchingUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/utils/MatchingUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/utils/PubSubDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/utils/PubSubDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/controller/WebSocketHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PoseEstimation/WEB-INF/classes/com/fishhao/controller/WebSocketHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PoseEstimation/view/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PoseEstimation/view/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PoseEstimation/view/webGL.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PoseEstimation/view/webGL.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fishhao/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fishhao/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fishhao/controller/WebSocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fishhao/controller/WebSocketController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fishhao/entity/Publisher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fishhao/entity/SubThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fishhao/entity/SubThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fishhao/entity/Subscriber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fishhao/utils/MatchingUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fishhao/utils/MatchingUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fishhao/utils/PubSubDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fishhao/utils/PubSubDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fishhao/controller/WebSocketHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fishhao/controller/WebSocketHelper.class" afterDir="false" />
     </list>
+    <list id="e94a6d9b-38fb-4388-8bd6-01e21967580f" name="前端完成视频帧采集编码发送； WebSocketHelper初步接收（需要进一步解析）； SendMsg实体类用于存放前端向后端传递消息。" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,26 +29,26 @@
     <session id="1511777056">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.4" value="5" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="12" />
+          <entry key="class" value="19" />
           <entry key="css" value="7" />
-          <entry key="java" value="44" />
+          <entry key="java" value="46" />
           <entry key="js" value="12" />
           <entry key="json" value="1" />
           <entry key="jsp" value="12" />
@@ -75,14 +57,14 @@
           <entry key="scss" value="7" />
           <entry key="scssc" value="1" />
           <entry key="ts" value="1" />
-          <entry key="xml" value="14" />
+          <entry key="xml" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="12" />
+          <entry key="CLASS" value="19" />
           <entry key="CSS" value="7" />
-          <entry key="JAVA" value="44" />
+          <entry key="JAVA" value="46" />
           <entry key="JSON" value="1" />
           <entry key="JSP" value="12" />
           <entry key="JavaScript" value="12" />
@@ -91,26 +73,26 @@
           <entry key="SCSS" value="7" />
           <entry key="SourceMap" value="1" />
           <entry key="TypeScript" value="1" />
-          <entry key="XML" value="14" />
+          <entry key="XML" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2133" />
+          <entry key="java" value="2317" />
           <entry key="js" value="377" />
-          <entry key="jsp" value="3522" />
+          <entry key="jsp" value="3919" />
           <entry key="scss" value="3" />
-          <entry key="txt" value="131" />
+          <entry key="txt" value="172" />
           <entry key="xml" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="5" />
-          <entry key="JAVA" value="2133" />
-          <entry key="JSP" value="3522" />
+          <entry key="JAVA" value="2317" />
+          <entry key="JSP" value="3919" />
           <entry key="JavaScript" value="372" />
-          <entry key="PLAIN_TEXT" value="131" />
+          <entry key="PLAIN_TEXT" value="172" />
           <entry key="SCSS" value="3" />
           <entry key="XML" value="41" />
         </counts>
@@ -120,31 +102,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/service/RedisService/Subscriber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/service/RedisService/SubThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
+            <state relative-caret-position="323">
               <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/utils/PoseUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -152,19 +113,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1862">
-              <caret line="141" column="58" selection-start-line="141" selection-start-column="58" selection-end-line="141" selection-end-column="58" />
+            <state relative-caret-position="2324">
+              <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#906#930#0" expanded="true" />
-                <element signature="e#2513#2514#0" expanded="true" />
-                <element signature="e#2545#2546#0" expanded="true" />
-                <element signature="e#2612#2613#0" expanded="true" />
-                <element signature="e#2646#2647#0" expanded="true" />
-                <element signature="e#2714#2715#0" expanded="true" />
-                <element signature="e#2759#2760#0" expanded="true" />
-                <element signature="e#2827#2828#0" expanded="true" />
-                <element signature="e#2872#2873#0" expanded="true" />
+                <element signature="e#5303#5319#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,21 +126,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/entity/SendMsg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            <state relative-caret-position="443">
+              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
               <folding>
-                <element signature="e#180#181#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#262#263#0" expanded="true" />
                 <element signature="e#304#305#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#378#379#0" expanded="true" />
                 <element signature="e#406#407#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#564#565#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,10 +143,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/test.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-936">
-              <caret line="212" column="48" selection-start-line="212" selection-start-column="48" selection-end-line="212" selection-end-column="48" />
+            <state relative-caret-position="380">
+              <caret line="215" column="151" selection-start-line="215" selection-start-column="151" selection-end-line="215" selection-end-column="151" />
               <folding>
+                <element signature="n#style#0;n#canvas#0;n#data-box#1;n#data-box#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#video#0;n#data-box#1;n#data-box#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,25 +168,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-342" />
+            <state relative-caret-position="19">
+              <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/redis.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3580" />
+            <state relative-caret-position="253">
+              <caret line="24" selection-start-line="24" selection-end-line="28" selection-end-column="42" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/controller/IndexController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -249,7 +210,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/webGL/TemplateData/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/redis.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/redis.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fishhao/service/RedisGeneratorDao.java" />
@@ -281,9 +241,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fishhao/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fishhao/utils/PubSubDemo.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fishhao/entity/SendMsg.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/test.jsp" />
       </list>
     </option>
   </component>
@@ -301,10 +262,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="349" />
-    <option name="y" value="103" />
-    <option name="width" value="1026" />
-    <option name="height" value="546" />
+    <option name="x" value="462" />
+    <option name="width" value="910" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -312,6 +272,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -427,17 +388,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="statics" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PoseEstimation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PoseEstimation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="statics" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="webGL" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PoseEstimation" type="b2602c69:ProjectViewProjectNode" />
@@ -455,23 +406,22 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PoseEstimation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PoseEstimation" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="workspace&#9;FILE&#9;file://F:/Projects/PoseEstimation/.idea/workspace.xml" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557135684181" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ViewPlatform" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558278455200" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.30574712" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -489,11 +439,12 @@
     <configuration name="test" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.59.346" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="jdk1.8">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/PoseEstimation/test" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="PoseEstimation:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/PoseEstimation" />
           </settings>
         </artifact>
       </deployment>
@@ -566,7 +517,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c0df6602-7a82-484a-a97c-5d50d1123dfc" name="Default Changelist" comment="" />
+      <changelist id="ff5ad049-ae1f-4d2a-a54c-aec0c15599f4" name="Default Changelist" comment="前端完成视频帧采集编码发送；&#10;WebSocketHelper初步接收（需要进一步解析）；&#10;SendMsg实体类用于存放前端向后端传递消息。" />
       <created>1555664169539</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -586,30 +537,33 @@
       <workItem from="1556248197994" duration="1230000" />
       <workItem from="1556498921354" duration="11283000" />
       <workItem from="1556592998725" duration="1131000" />
+      <workItem from="1557193002811" duration="11058000" />
+      <workItem from="1558276854523" duration="1583000" />
     </task>
-    <task id="LOCAL-00001" summary="First commit: POSE ESTIMATION">
-      <created>1556503836152</created>
+    <task id="LOCAL-00001" summary="前端完成视频帧采集编码发送；&#10;WebSocketHelper初步接收（需要进一步解析）；&#10;SendMsg实体类用于存放前端向后端传递消息。">
+      <created>1557138077160</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1556503836152</updated>
+      <updated>1557138077160</updated>
     </task>
-    <task id="LOCAL-00002" summary="余弦相似度工具类">
-      <created>1556593287630</created>
+    <task id="LOCAL-00002" summary="前端定时获取视频帧发送到后端功能打通，字符串限制问题仍需要解决。">
+      <created>1557199197002</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1556593287630</updated>
+      <updated>1557199197002</updated>
     </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109679000" />
+    <option name="totallyTimeSpent" value="123992000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49763033" visible="true" weight="0.30181542" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49763033" visible="true" weight="0.26626325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -619,8 +573,8 @@
       <window_info id="Web" order="7" sideWeight="0.50236964" side_tool="true" weight="0.26626325" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.7655738" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.45720476" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6967213" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6803279" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
@@ -630,8 +584,8 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.80491805" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.6655738" />
-      <window_info anchor="bottom" id="Spring" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.2262295" />
+      <window_info anchor="bottom" id="Spring" order="14" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -645,6 +599,9 @@
       <window_info anchor="right" id="CDI" order="10" />
       <window_info anchor="right" id="Bean Validation" order="11" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -672,9 +629,31 @@
       </map>
     </option>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="前端完成视频帧采集编码发送；&#10;WebSocketHelper初步接收（需要进一步解析）；&#10;SendMsg实体类用于存放前端向后端传递消息。" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端完成视频帧采集编码发送；&#10;WebSocketHelper初步接收（需要进一步解析）；&#10;SendMsg实体类用于存放前端向后端传递消息。" />
+    <MESSAGE value="前端定时获取视频帧发送到后端功能打通，字符串限制问题仍需要解决。" />
+    <option name="LAST_COMMIT_MESSAGE" value="前端定时获取视频帧发送到后端功能打通，字符串限制问题仍需要解决。" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketHelper.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketHelper.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -719,23 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0.jar!/javax/jms/Message.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-725">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/statics/js/components/Common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -764,34 +726,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/redis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/statics/js/components/Dance.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3580" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114" />
       </provider>
     </entry>
     <entry file="jar://F:/Java/jdk1.8.0_181/src.zip!/javax/management/remote/rmi/RMIConnectionImpl.java">
@@ -825,63 +764,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/service/RedisService/SubThread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0.jar!/javax/jms/Message.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        <state relative-caret-position="114">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0.jar!/javax/jms/BytesMessage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2451">
+          <caret line="129" selection-start-line="129" selection-end-line="133" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/utils/PoseUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
+        <state relative-caret-position="722">
           <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/entity/SendMsg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding>
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1862">
-          <caret line="141" column="58" selection-start-line="141" selection-start-column="58" selection-end-line="141" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#906#930#0" expanded="true" />
-            <element signature="e#2513#2514#0" expanded="true" />
-            <element signature="e#2545#2546#0" expanded="true" />
-            <element signature="e#2612#2613#0" expanded="true" />
-            <element signature="e#2646#2647#0" expanded="true" />
-            <element signature="e#2714#2715#0" expanded="true" />
-            <element signature="e#2759#2760#0" expanded="true" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#2872#2873#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/service/RedisService/Subscriber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="638">
           <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -889,15 +805,193 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.6/fastjson-1.2.6.jar!/com/alibaba/fastjson/parser/JSONLexerBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.6/fastjson-1.2.6.jar!/com/alibaba/fastjson/parser/ParserConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.6/fastjson-1.2.6.jar!/com/alibaba/fastjson/parser/JSONScanner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.6/fastjson-1.2.6.jar!/com/alibaba/fastjson/parser/DefaultJSONParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.6/fastjson-1.2.6.jar!/com/alibaba/fastjson/JSON.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/redis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="24" selection-start-line="24" selection-end-line="28" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/service/RedisService/SubThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/controller/WebSocketHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2324">
+          <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5303#5319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fishhao/entity/SendMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/test.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-936">
-          <caret line="212" column="48" selection-start-line="212" selection-start-column="48" selection-end-line="212" selection-end-column="48" />
+        <state relative-caret-position="380">
+          <caret line="215" column="151" selection-start-line="215" selection-start-column="151" selection-end-line="215" selection-end-column="151" />
           <folding>
+            <element signature="n#style#0;n#canvas#0;n#data-box#1;n#data-box#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#video#0;n#data-box#1;n#data-box#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>PoseEstimation:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>jdk1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>PoseEstimation</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30574712" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.47586206" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

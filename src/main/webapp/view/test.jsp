@@ -148,9 +148,8 @@
                         </el-form>
                     </data-box>
                     <data-box :title="'摄像头实时输出画面'" :dheight="400" :boxb="false">
-                        <%--<canvas style="width: 100%; height: 100%">--%>
+                            <canvas id="targetCanvas" width="400px" height="300px" style="visibility:hidden;"></canvas>
                             <video style="width: 100%; height: 100%" autoplay></video>
-                        <%--</canvas>--%>
                     </data-box>
                 </data-box>
 
@@ -207,15 +206,14 @@
             sendMsg:{
                 userToken:'123',
                 image:'',
-                task:1
+                task:'1'
             }
         },
         mounted: function(){
             this.initPage();
             this.initWebSocket(); //初始化WebSocket
             this.initCamera(); //初始化摄像头
-
-            // this.gameInstance = UnityLoader.instantiate("gameContainer", "/PoseEstimation/webGL/Build/PoseTest.json", {onProgress: UnityProgress});
+            this.gameInstance = UnityLoader.instantiate("gameContainer", "/PoseEstimation/webGL/Build/Receiver2Dv5.json", {onProgress: UnityProgress});
         },
         watch:{
             chosenModule: function (newVal) {
@@ -286,16 +284,16 @@
             transImage:function (video) {
                 console.log("进入tansImage方法");
                 let _this = this;
-                let canvas = document.createElement("canvas");
-                let scale = 0.01; //缩放比例
-                canvas.width = video.videoWidth * scale;
-                canvas.height = video.videoHeight * scale;
-                canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-                let image = canvas.toDataURL('image/png');
+                let canvas = document.getElementById('targetCanvas');
+                // let scale = 1; //缩放比例
+                // canvas.width = video.videoWidth * scale;
+                // canvas.height = video.videoHeight * scale;
+                canvas.getContext('2d').drawImage(video, 0, 0, 400, 300);
+                let image = canvas.toDataURL('image/jpeg');
                 if(image != null){
                     _this.sendMsg.image = image; //填充base64编码后的视频帧
                     this.socket.send(JSON.stringify(_this.sendMsg)); //通过WebSocket发送到后台
-                    console.log(image);
+                    // console.log(image);
                 }
             }
 

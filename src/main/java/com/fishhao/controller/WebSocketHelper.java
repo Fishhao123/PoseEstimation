@@ -12,6 +12,7 @@ import redis.clients.jedis.JedisPoolConfig;
 //import javax.jms.BytesMessage;
 //import javax.jms.JMSException;
 //import javax.jms.Message;
+import javax.jms.JMSException;
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
@@ -52,8 +53,8 @@ public class WebSocketHelper {
     @OnMessage
     public void onMessage(String message) { //TODO:接收到前台的实时姿态数据后存入redis
         System.out.println("接收到消息： " + message);
-        SendMsg sendMsg = JSON.parseObject(message, SendMsg.class);
-//        putRedis(message);
+        SendMsg data = JSON.parseObject(message, SendMsg.class); //SendMsg send是相对于前端来说的
+        putRedis(data);
     }
 
 //    @OnMessage
@@ -136,6 +137,41 @@ public class WebSocketHelper {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    //收到消息后放入redis中
+    //TODO 新写的方法，原方法在下面注释
+    public static synchronized void putRedis(SendMsg data){
+            // 得到一些参数：
+
+        String userToken = data.getUserToken(); // user-token
+        String task = data.getTask(); // task
+        String imageBase64 = data.getImage(); // origin image
+        String imageID = UUID.randomUUID().toString(); // imageID
+
+        Jedis jedis = jedisPool.getResource();
+
+        Map<String,String> imageData = new HashMap<String, String>();
+        imageData.put("imageID", imageID);
+        imageData.put("userToken", userToken);
+        imageData.put("taskList", task);
+        imageData.put("image", imageBase64);
+
+        JSONObject jsonObject = JSONObject.fromObject(imageData);
+
+//              比较task列表并分发存入对应的redis的list
+        int taskToDo = Integer.parseInt(task);
+        if((taskToDo&0x01)>0) { //pose
+            jedis.rpush("image_queue_to_pose_estimation", jsonObject.toString());
+//                    jedisTemplate.convertAndSend("test_channel",jsonObject);
+        }
+        if((taskToDo&0x02)>0) { //face
+            jedis.rpush("image_queue_to_face_recognition", jsonObject.toString());
+        }if((taskToDo&0x04)>0) { //object
+            jedis.rpush("image_queue_to_object_recognition", jsonObject.toString());
+        }
+        //手动释放资源，不然会因为jedisPool里面的maxActive=200的限制，只能创建200个jedis资源。
+        jedis.close();
     }
 
     //收到消息后放入redis中

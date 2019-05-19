@@ -4,7 +4,7 @@ package com.fishhao.entity;
 public class SendMsg {
     private String userToken; //用户标识
     private String image; //经过base64编码后的视频帧
-    private int task; //用于指定算法，可选1,2,3
+    private String task; //用于指定算法，可选"1", "2", "3"
 
     public String getUserToken() {
         return userToken;
@@ -22,11 +22,11 @@ public class SendMsg {
         this.image = image;
     }
 
-    public int getTask() {
+    public String getTask() {
         return task;
     }
 
-    public void setTask(int task) {
+    public void setTask(String task) {
         this.task = task;
     }
 }

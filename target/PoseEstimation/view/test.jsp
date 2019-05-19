@@ -148,7 +148,9 @@
                         </el-form>
                     </data-box>
                     <data-box :title="'摄像头实时输出画面'" :dheight="400" :boxb="false">
-                        <video style="width: 100%; height: 100%" autoplay></video>
+                        <%--<canvas style="width: 100%; height: 100%">--%>
+                            <video style="width: 100%; height: 100%" autoplay></video>
+                        <%--</canvas>--%>
                     </data-box>
                 </data-box>
 
@@ -201,12 +203,18 @@
             pageSetList:{
                 'dance': Dance,
                 'exercise': Exercise
+            },
+            sendMsg:{
+                userToken:'123',
+                image:'',
+                task:1
             }
         },
         mounted: function(){
             this.initPage();
-            this.initCamera(); //初始启动摄像头
-            // this.initWebSocket();
+            this.initWebSocket(); //初始化WebSocket
+            this.initCamera(); //初始化摄像头
+
             // this.gameInstance = UnityLoader.instantiate("gameContainer", "/PoseEstimation/webGL/Build/PoseTest.json", {onProgress: UnityProgress});
         },
         watch:{
@@ -218,16 +226,13 @@
             initCamera:function(){
                 let _this = this;
                 let constraints = { video: true };
+                let video = document.querySelector('video');
                 navigator.mediaDevices.getUserMedia(constraints)
                     .then(function(mediaStream) {
-                        let video = document.querySelector('video');
                         video.srcObject = mediaStream;
-                        video.onloadedmetadata = function(e) {
-                            // video.play();
-                            // _this.recordVideo(mediaStream); //开始录制视频
-                        };
                     })
                     .catch(function(err) { console.log(err.name + ": " + err.message); }); // 总是在最后检查错误
+
             },
             initPage:function(){ //页面初始化
                 this.chosenCharacter = this.characterOptions[0].value; //初始选择男性角色
@@ -248,7 +253,7 @@
                 if(window.WebSocket){
                     console.log("初始化WebSocket！");
                     // this.socket = new WebSocket('ws://localhost:8080/PoseEstimation/unityWebSocket');
-                    this.socket = new WebSocket('ws://localhost:8080/PoseEstimation/webSocket/123'); //123为用户ID
+                    this.socket = new WebSocket('ws://localhost:8080/PoseEstimation/webSocket/' + this.sendMsg.userToken); //123为用户ID
                     this.socket.onopen = this.onOpen;
                     this.socket.onmessage = this.onMessage;
                     this.socket.onerror = this.onError;
@@ -258,9 +263,13 @@
                 }
             },
             onOpen: function () {
+                let _this = this;
                 console.log("WebSocket连接成功!");
-                this.socket.binaryType = "arraybuffer"; //设置发送消息类型
-                this.socket.send("Hello!");
+                setInterval(function(){
+                    _this.transImage(document.querySelector('video'));
+                }, 50); //50ms发送一次
+                // this.socket.binaryType = "arraybuffer"; //设置发送消息类型
+                // this.socket.send("Hello!");
             },
             onMessage: function(event){
                 if(event.data){
@@ -274,6 +283,22 @@
             onClose: function(){
                 console.log("WebSocket关闭！");
             },
+            transImage:function (video) {
+                console.log("进入tansImage方法");
+                let _this = this;
+                let canvas = document.createElement("canvas");
+                let scale = 1; //缩放比例
+                canvas.width = video.videoWidth * scale;
+                canvas.height = video.videoHeight * scale;
+                canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+                let image = canvas.toDataURL('image/png');
+                if(image != null){
+                    _this.sendMsg.image = image; //填充base64编码后的视频帧
+                    this.socket.send(JSON.stringify(_this.sendMsg)); //通过WebSocket发送到后台
+                    console.log(image);
+                }
+            }
+
             // recordVideo: function (stream) { //录制实时视频
             //     let _this = this;
             //     let options;
